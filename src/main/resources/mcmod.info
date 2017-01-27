@@ -1,0 +1,16 @@
+[
+{
+  "modid": "unknownmagic",
+  "name": "Unknown Magic",
+  "description": "Science before it was Science was known as Magic, What could this UnknownMagic possibly mean?",
+  "version": "1.11-0.0.1.0",
+  "mcversion": "1.11",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["CreedTheFreak, Wasamiam"],
+  "credits": "CreedTheFreak, Wasamiam",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
