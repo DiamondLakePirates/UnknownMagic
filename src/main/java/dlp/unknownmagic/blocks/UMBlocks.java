@@ -1,5 +1,6 @@
 package dlp.unknownmagic.blocks;
 
+import dlp.unknownmagic.UnknownMagic;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -14,7 +15,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class UMBlocks 
 {
 	
-	public static Block ancientBrick;
+	public static Block mAncientBrick;
+	public static Block mMineralDeposit;
 	
 	/**
 	 * This method will instantiate the UnknownMagic Base Blocks for use
@@ -22,7 +24,8 @@ public class UMBlocks
 	 */
 	public static void createUMBlocks() 
 	{
-		ancientBrick = register (new BaseBlock (Material.ROCK, "ancient_brick").setCreativeTab (CreativeTabs.BUILDING_BLOCKS));
+		mAncientBrick = register (new BaseBlock (Material.ROCK, "ancient_brick").setCreativeTab (UnknownMagic.creativeUMTab).setHardness (1.5F));
+		mMineralDeposit = register (new BaseBlock (Material.ROCK, "mineral_deposit").setCreativeTab (UnknownMagic.creativeUMTab).setHardness (1.5F));
 	}
 
 	/**

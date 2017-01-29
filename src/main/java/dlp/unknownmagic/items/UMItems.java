@@ -1,5 +1,6 @@
 package dlp.unknownmagic.items;
 
+import dlp.unknownmagic.UnknownMagic;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -18,12 +19,12 @@ public class UMItems
    * Item white_stone - A General Item used for Crafting
    * Note: Before deleting this put in the Docs
    */
-  public static Item whiteStone;
+  public static Item mWhiteStone;
   /**
    * Item minerals - A Item used to create Crystals
    * Note: Before deleting this put in the Docs
    */
-  public static Item minerals;
+  public static Item mMinerals;
 
   /**
    * This Method creates the given Item, By declaring a new BaseItem
@@ -35,8 +36,8 @@ public class UMItems
   public static void createUMItems ()
   {
     // Registers an Item and sets it in the CreativeTab
-    whiteStone = register(new BaseItem ("white_stone").setCreativeTab (CreativeTabs.MATERIALS));
-    minerals = register (new BaseItem ("minerals").setCreativeTab (CreativeTabs.MATERIALS));
+    mWhiteStone = register(new BaseItem ("white_stone").setCreativeTab (UnknownMagic.creativeUMTab));
+    mMinerals = register (new BaseItem ("minerals").setCreativeTab (UnknownMagic.creativeUMTab));
   }
 
   public static <T extends Item> T register (T item)

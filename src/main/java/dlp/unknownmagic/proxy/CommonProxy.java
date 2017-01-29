@@ -11,6 +11,14 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class CommonProxy
 {
 
+  /**
+   * This method is called during the pre-init phase and is used
+   * to register and do various tasks during the pre-init phase.
+   * This is used to do those tasks both for the client and server
+   * side of the mod since we are in the common proxy.
+   *
+   * @param event The event which is passed into the method.
+   */
   public void fmlLifeCycleEvent (FMLPreInitializationEvent event)
   {
     UMItems.createUMItems ();
@@ -33,7 +41,9 @@ public class CommonProxy
    * an item that has been instantiated.
    *
    * @param item The item to register
+   *
    * @param meta The meta data the Item may have
+   *
    * @param id   The identification of the item.
    */
   public void registerItemRenderer (Item item, int meta, String id)
