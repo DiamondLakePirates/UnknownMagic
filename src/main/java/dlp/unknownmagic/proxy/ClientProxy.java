@@ -10,23 +10,17 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 public class ClientProxy extends CommonProxy
 {
-
 	@Override
 	public void fmlLifeCycleEvent(FMLPreInitializationEvent event)
 	{
-		// Common code
 		super.fmlLifeCycleEvent (event);
 
-		// Client sided code
 	}
 	
 	@Override
 	public void fmlLifeCycleEvent(FMLInitializationEvent event)
 	{
 		super.fmlLifeCycleEvent (event);
-
-		// UMItems.createUMItems ();
-		// BlockRenderingRegister.registerBlockRenderer();
 	}
 	
 	@Override
