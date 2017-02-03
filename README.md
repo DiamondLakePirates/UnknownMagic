@@ -1,5 +1,7 @@
 # UnknownMagic [WIP]
 
+**NOTE: Since we are still in early development of the Mod we are not currently looking for help with development in terms of adding features, But we will still accept any and all Ideas and bug fixing issues you may find.**
+
 ## Table of Contents
 
 1. [Description](#description)
@@ -136,7 +138,7 @@ private static < T extends Block> T register (T block, ItemBlock itemBlock)
 
 ### <a name="reporting_bugs"></a>Reporting Bugs
 ---
-**Coming Soon**
+When it comes to reporting Bugs that you have found in the Mod it is quite simple, just submit an issue. The only thing we ask you to do is to please be as descriptive as possible so that we are able to recreate the bug in order to fix it. If the issue opened is vague we will ask you to expound on how the bug occured and what was the process you followed in order for the bug to happen. We ask for you to be specific in how you report bugs because otherwise it will be quite difficult for us to fix a bug it we don't know how to replicate it.
 
 
 
