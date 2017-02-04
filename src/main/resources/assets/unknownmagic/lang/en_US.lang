@@ -1,6 +1,9 @@
-// ***** Names and Information for Tiles *****
+# Blocks and Tiles [One in the Same]
 tile.ancient_brick.name=Ancient Brick
 
-// ***** Names and Information for Items *****
+# Items
 item.white_stone.name=White Stone Dust
 item.minerals.name=Minerals
+
+# Item Groups
+itemGroup.unknownmagic=Unknown Magic
