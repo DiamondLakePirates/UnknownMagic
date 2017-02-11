@@ -1,6 +1,6 @@
 package dlp.unknownmagic;
 
-import dlp.unknownmagic.client.UnknownMagicTab;
+import dlp.unknownmagic.creativetab.UnknownMagicTab;
 import dlp.unknownmagic.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;

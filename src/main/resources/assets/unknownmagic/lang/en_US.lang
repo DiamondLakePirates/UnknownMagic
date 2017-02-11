@@ -4,6 +4,7 @@ tile.ancient_brick.name=Ancient Brick
 # Items
 item.white_stone.name=White Stone Dust
 item.minerals.name=Minerals
+item.tome_of_allure.name=The Tome Of Allure
 
 # Item Groups
 itemGroup.unknownmagic=Unknown Magic

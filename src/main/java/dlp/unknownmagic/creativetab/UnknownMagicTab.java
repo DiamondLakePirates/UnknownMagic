@@ -1,4 +1,4 @@
-package dlp.unknownmagic.client;
+package dlp.unknownmagic.creativetab;
 
 import dlp.unknownmagic.UnknownMagic;
 import dlp.unknownmagic.blocks.UMBlocks;
