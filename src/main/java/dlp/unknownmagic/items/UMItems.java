@@ -1,7 +1,7 @@
 package dlp.unknownmagic.items;
 
 import dlp.unknownmagic.UnknownMagic;
-import net.minecraft.creativetab.CreativeTabs;
+import dlp.unknownmagic.lib.LibItemNames;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -25,9 +25,11 @@ public class UMItems
    * Note: Before deleting this put in the Docs
    */
   public static Item mMinerals;
+  public static Item mTomeOfAllure;
+
 
   /**
-   * This Method creates the given Item, By declaring a new BaseItem
+   * This Method creates the given Item, By declaring a new ItemBase
    * then passing in the unlocalized name into an Item constructor.
    * This method is also ran during the Pre-Inti phase in Forge in
    * order to initialize and register all of the Item we have
@@ -36,17 +38,19 @@ public class UMItems
   public static void createUMItems ()
   {
     // Registers an Item and sets it in the CreativeTab
-    mWhiteStone = register(new BaseItem ("white_stone").setCreativeTab (UnknownMagic.creativeUMTab));
-    mMinerals = register (new BaseItem ("minerals").setCreativeTab (UnknownMagic.creativeUMTab));
+    mWhiteStone = register(new ItemBase (LibItemNames.WHITE_STONE).setCreativeTab (UnknownMagic.creativeUMTab));
+    mMinerals = register (new ItemBase (LibItemNames.MINERALS).setCreativeTab (UnknownMagic.creativeUMTab));
+    mTomeOfAllure = register (new ItemAllureTome ().setCreativeTab (UnknownMagic.creativeUMTab));
+
   }
 
   public static <T extends Item> T register (T item)
   {
     GameRegistry.register (item);
 
-    if (item instanceof BaseItem)
+    if (item instanceof ItemBase)
     {
-      ((BaseItem) item).registerItemModel ();
+      ((ItemBase) item).registerItemModel ();
     }
 
     return item;

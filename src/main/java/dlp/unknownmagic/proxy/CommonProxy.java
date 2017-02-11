@@ -1,5 +1,6 @@
 package dlp.unknownmagic.proxy;
 
+import dlp.unknownmagic.UnknownMagic;
 import dlp.unknownmagic.blocks.UMBlocks;
 import dlp.unknownmagic.items.UMItems;
 
@@ -7,6 +8,8 @@ import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
+import network.UMGuiHandler;
 
 public class CommonProxy
 {
@@ -27,7 +30,9 @@ public class CommonProxy
 
   public void fmlLifeCycleEvent (FMLInitializationEvent event)
   {
-
+    // Register the GuiHandler with the server and Client.
+    NetworkRegistry.INSTANCE.registerGuiHandler
+        (UnknownMagic.instance, new UMGuiHandler ());
   }
 
   public void fmlLifeCycleEvent (FMLPostInitializationEvent event)

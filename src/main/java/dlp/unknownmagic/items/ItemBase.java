@@ -5,7 +5,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
 /**
- * This is the BaseItem class used to setup the basic
+ * This is the ItemBase class used to setup the basic
  * properties of a regular non-special item for the
  * UnknownMagic mod. This is used to create the base
  * Items for the UnknownMagic mod without any functionality
@@ -13,7 +13,7 @@ import net.minecraft.item.Item;
  *
  * @author CreedTheFreak
  */
-public class BaseItem extends Item
+public class ItemBase extends Item
 {
 
   private String mName;
@@ -24,7 +24,7 @@ public class BaseItem extends Item
    * @param unlocalizedName The name of the Item that is
    *                        to be instantiated.
    */
-  public BaseItem (String unlocalizedName)
+  public ItemBase (String unlocalizedName)
   {
     super ();
 
@@ -62,7 +62,7 @@ public class BaseItem extends Item
    * @return The Item that the method was called on.
    */
   @Override
-  public BaseItem setCreativeTab (CreativeTabs tab)
+  public ItemBase setCreativeTab (CreativeTabs tab)
   {
     super.setCreativeTab (tab);
     return this;
