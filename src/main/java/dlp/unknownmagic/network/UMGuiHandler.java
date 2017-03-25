@@ -1,6 +1,7 @@
-package network;
+package dlp.unknownmagic.network;
 
 import dlp.unknownmagic.client.gui.GuiTomeOfAllure;
+import dlp.unknownmagic.lib.LibGuiIdentifiers;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.IGuiHandler;
@@ -13,8 +14,6 @@ import javax.annotation.Nullable;
  */
 public class UMGuiHandler implements IGuiHandler
 {
-
-  public static final int GUI_ID_TOME = 0;
 
   /**
    * This method sends the server the appropriate Gui Elements, so for example
@@ -39,7 +38,7 @@ public class UMGuiHandler implements IGuiHandler
   {
     switch (ID)
     {
-      case GUI_ID_TOME:
+      case LibGuiIdentifiers.GUI_ID_TOME:
         return null;
     }
 
@@ -69,7 +68,7 @@ public class UMGuiHandler implements IGuiHandler
   {
     switch (ID)
     {
-      case GUI_ID_TOME:
+      case LibGuiIdentifiers.GUI_ID_TOME:
         return new GuiTomeOfAllure ();
     }
     return null;

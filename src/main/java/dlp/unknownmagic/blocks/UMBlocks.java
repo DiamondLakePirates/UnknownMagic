@@ -1,6 +1,7 @@
 package dlp.unknownmagic.blocks;
 
 import dlp.unknownmagic.UnknownMagic;
+import dlp.unknownmagic.lib.LibBlockNames;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -24,8 +25,8 @@ public class UMBlocks
 	 */
 	public static void createUMBlocks() 
 	{
-		mAncientBrick = register (new BaseBlock (Material.ROCK, "ancient_brick").setCreativeTab (UnknownMagic.creativeUMTab).setHardness (1.5F));
-		mMineralDeposit = register (new BaseBlock (Material.ROCK, "mineral_deposit").setCreativeTab (UnknownMagic.creativeUMTab).setHardness (1.5F));
+		mAncientBrick = register (new BaseBlock (Material.ROCK, LibBlockNames.ANCIENT_BRICKS).setCreativeTab (UnknownMagic.creativeUMTab).setHardness (1.5F));
+		mMineralDeposit = register (new BaseBlock (Material.ROCK, LibBlockNames.MINERAL_DEPOSIT).setCreativeTab (UnknownMagic.creativeUMTab).setHardness (1.5F));
 	}
 
 	/**

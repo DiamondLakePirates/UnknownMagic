@@ -1,6 +1,7 @@
 package dlp.unknownmagic.items;
 
 import dlp.unknownmagic.UnknownMagic;
+import dlp.unknownmagic.lib.LibGuiIdentifiers;
 import dlp.unknownmagic.lib.LibItemNames;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -8,7 +9,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
-import network.UMGuiHandler;
+import dlp.unknownmagic.network.UMGuiHandler;
 
 import javax.annotation.Nonnull;
 
@@ -47,7 +48,7 @@ public class ItemAllureTome extends ItemBase
     ItemStack itemStack = player.getHeldItem(handIn);
 
       player.openGui (UnknownMagic.instance,
-          UMGuiHandler.GUI_ID_TOME, world, 0,0,0);
+          LibGuiIdentifiers.GUI_ID_TOME, world, 0,0,0);
 
     return (new ActionResult (EnumActionResult.SUCCESS, itemStack));
   }
