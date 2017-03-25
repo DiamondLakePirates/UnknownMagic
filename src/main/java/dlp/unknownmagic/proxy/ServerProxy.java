@@ -8,17 +8,17 @@ public class ServerProxy extends CommonProxy
 {
 
 	@Override
-	public void fmlLifeCycleEvent(FMLPreInitializationEvent e) {
-		super.fmlLifeCycleEvent(e);
+	public void preInit (FMLPreInitializationEvent e) {
+		super.preInit (e);
 	}
 	
 	@Override
-	public void fmlLifeCycleEvent(FMLInitializationEvent e) {
-		super.fmlLifeCycleEvent(e);
+	public void init (FMLInitializationEvent e) {
+		super.init (e);
 	}
 	
 	@Override
-	public void fmlLifeCycleEvent(FMLPostInitializationEvent e) {
-		super.fmlLifeCycleEvent(e);
+	public void postInit (FMLPostInitializationEvent e) {
+		super.postInit (e);
 	}
 }
