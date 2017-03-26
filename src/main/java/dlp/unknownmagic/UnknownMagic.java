@@ -17,7 +17,7 @@ public class UnknownMagic
 {
     public static final String MODID = "unknownmagic";
     public static final String MODNAME = "Unknown Magic";
-    public static final String VERSION = "1.11-0.0.1.0";
+    public static final String VERSION = "1.11-0.0.3.0";
 
     // These constants will be for the CreativeTabs Menus on
     // Initialization of the Mod
