@@ -1,6 +1,7 @@
 package dlp.unknownmagic.ether;
 
 import net.minecraft.nbt.NBTBase;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagInt;
 import net.minecraft.util.EnumFacing;
 import net.minecraftforge.common.capabilities.Capability;
@@ -10,7 +11,7 @@ import net.minecraftforge.common.capabilities.CapabilityManager;
 import java.util.concurrent.Callable;
 
 /**
- * This is the EtherCapability used for for the Ether Capability.
+ * This is the EtherCapability used for the Ether Capability.
  */
 public class EtherCapability
 {
@@ -31,7 +32,14 @@ public class EtherCapability
             public NBTBase writeNBT (Capability<IEtherStorage> capability,
                 IEtherStorage instance, EnumFacing side)
             {
-                return new NBTTagInt (instance.getEtherStored ());
+                NBTTagCompound cmpd = new NBTTagCompound ();
+
+                cmpd.setInteger ("ether", ((Ether) instance).mEther);
+                cmpd.setInteger ("etherCap", ((Ether) instance).mEtherCap);
+                cmpd.setInteger ("maxReceive", ((Ether) instance).mMaxReceive);
+                cmpd.setInteger ("maxExtract", ((Ether) instance).mMaxExtract);
+
+                return cmpd;
             }
 
             /**
@@ -42,11 +50,18 @@ public class EtherCapability
             public void readNBT (Capability<IEtherStorage> capability,
                 IEtherStorage instance, EnumFacing side, NBTBase nbt)
             {
+                NBTTagCompound cmpdNBT = (NBTTagCompound) nbt;
+
                 if (!(instance instanceof Ether))
                     throw new IllegalArgumentException (
                         "Can not deserialize to an " + "instance that isn't the"
                             + "default implementation of an IEtherStorage.");
-                ((Ether) instance).mEther = (((NBTTagInt) nbt).getInt ());
+                {
+                    ((Ether) instance).mEther = cmpdNBT.getInteger ("ether");
+                    ((Ether) instance).mEtherCap = cmpdNBT.getInteger ("etherCap");
+                    ((Ether) instance).mMaxReceive = cmpdNBT.getInteger ("maxReceive");
+                    ((Ether) instance).mMaxExtract = cmpdNBT.getInteger ("maxExtract");
+                }
             }
         },
          new Callable<IEtherStorage> ()

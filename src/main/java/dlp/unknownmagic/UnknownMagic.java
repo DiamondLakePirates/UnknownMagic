@@ -33,8 +33,7 @@ public class UnknownMagic
     @EventHandler
     public void preInit (FMLPreInitializationEvent event)
     {
-        // Implement Singleton Logger
-        // System.out.println ("Called method: [UnknownMagic] Pre-Init Phase");
+        Log.info ("Pre-Init Phase");
         proxy.preInit (event);
 
     }
@@ -42,6 +41,7 @@ public class UnknownMagic
     @EventHandler
     public void init (FMLInitializationEvent event)
     {
+        Log.info ("Init Phase");
         proxy.init (event);
 
     }
@@ -49,6 +49,7 @@ public class UnknownMagic
     @EventHandler
     public void postInit (FMLPostInitializationEvent event)
     {
+        Log.info ("Post-Init Phase");
         proxy.postInit (event);
 
     }
